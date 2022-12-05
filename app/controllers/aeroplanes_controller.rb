@@ -1,5 +1,5 @@
 class AeroplanesController < ApplicationController
-  before_action :set_aeroplane, only: %i[ show update destroy ]
+  before_action :set_aeroplane, only: %i[show update destroy]
 
   # GET /aeroplanes
   def index
@@ -39,13 +39,15 @@ class AeroplanesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_aeroplane
-      @aeroplane = Aeroplane.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def aeroplane_params
-      params.require(:aeroplane).permit(:name, :make_year, :country_of_origin, :fuel_economy, :long_range_cruise_speed, :passenger_capacity, :crew, :description, :photo)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_aeroplane
+    @aeroplane = Aeroplane.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def aeroplane_params
+    params.require(:aeroplane).permit(:name, :make_year, :country_of_origin, :fuel_economy, :long_range_cruise_speed,
+                                      :passenger_capacity, :crew, :description, :photo)
+  end
 end
