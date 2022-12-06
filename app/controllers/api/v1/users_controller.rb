@@ -25,6 +25,15 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
+  def login
+    @user = User.find_by(user_params)
+    if @user
+      render json: @user
+    else
+      render json: { error: 'Invalid email or password' }, status: :unauthorized
+    end
+  end
+
   # PATCH/PUT /users/1
   def update
     if @user.update(user_params)
