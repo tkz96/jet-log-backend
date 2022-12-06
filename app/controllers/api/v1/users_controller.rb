@@ -10,6 +10,7 @@ class Api::V1::UsersController < ApplicationController
 
   # GET /users/1
   def show
+    @user = User.find(params[:id])
     render json: @user
   end
 
@@ -47,8 +48,6 @@ class Api::V1::UsersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def user_params
-    # allow name, email, password, password_confirmation
-    
-    # params.require(:user).permit(:name)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
