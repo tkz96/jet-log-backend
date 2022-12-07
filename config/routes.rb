@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  get 'login/create'
   namespace :api do
     namespace :v1 do
       resources :reservations

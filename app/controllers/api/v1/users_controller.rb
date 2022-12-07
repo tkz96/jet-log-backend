@@ -25,15 +25,6 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
-  def login
-    @user = User.find_by(user_params)
-    if @user
-      render json: @user
-    else
-      render json: { error: 'Invalid email or password' }, status: :unauthorized
-    end
-  end
-
   # PATCH/PUT /users/1
   def update
     if @user.update(user_params)
@@ -57,6 +48,6 @@ class Api::V1::UsersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password)
   end
 end
