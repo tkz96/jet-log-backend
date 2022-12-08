@@ -5,12 +5,11 @@ Rails.application.routes.draw do
       resources :aeroplanes
       resources :users
       post "/login", to: "users#login"
-      
+      delete '/api/logout', to: 'sessions#destroy'
     end
   end
   resources :reservations
   resources :aeroplanes
   resources :users
-  # post "/login", to: "users#login"
 
 end
