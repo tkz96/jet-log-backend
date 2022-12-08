@@ -12,6 +12,10 @@ gem 'rack-cors'
 gem 'rails', '~> 7.0.4'
 gem 'rubocop', '~> 1.39'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+# use Json Web Token for authentication
+gem 'jwt'
+# use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   gem 'capybara', '~> 3.38'
