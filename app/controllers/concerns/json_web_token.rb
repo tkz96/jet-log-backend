@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-require "jwt"
+require 'jwt'
 module JsonWebToken
   extend ActiveSupport::Concern
   SECRET_KEY = Rails.application.secret_key_base
