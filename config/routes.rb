@@ -4,13 +4,12 @@ Rails.application.routes.draw do
       resources :reservations
       resources :aeroplanes
       resources :users
+      post "/login", to: "users#login"
+      delete '/api/logout', to: 'sessions#destroy'
     end
   end
   resources :reservations
   resources :aeroplanes
   resources :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
 end
