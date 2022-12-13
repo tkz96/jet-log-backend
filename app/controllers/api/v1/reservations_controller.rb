@@ -4,7 +4,6 @@ class Api::V1::ReservationsController < ApplicationController
 
   # GET /reservations
   def index
-    # @reservations = Reservation.all
     @reservations = @user.reservations.all
     render json: @reservations
   end
@@ -16,7 +15,6 @@ class Api::V1::ReservationsController < ApplicationController
 
   # POST /reservations
   def create
-    # @reservation = Reservation.new(reservation_params)
     @reservation = Reservation.new(reservation_params.merge(user: @user))
 
     if @reservation.save
