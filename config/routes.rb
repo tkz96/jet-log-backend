@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       resources :reservations	
       resources :aeroplanes
       resources :users
+      
       post "/login", to: "users#login"	
       delete '/logout', to: 'sessions#destroy'	
     end	
