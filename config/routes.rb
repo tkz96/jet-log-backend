@@ -1,16 +1,16 @@
-Rails.application.routes.draw do
-  namespace :api do
+Rails.application.routes.draw do	
+  namespace :api do	
     namespace :v1 do
-      resources :reservations
+      resources :reservations	
       resources :aeroplanes
       resources :users
-    end
-  end
-  resources :reservations
-  resources :aeroplanes
-  resources :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  root "root#index"
+      
+      post "/login", to: "users#login"	
+      delete '/logout', to: 'sessions#destroy'	
+    end	
+  end	
+  resources :reservations	
+  resources :aeroplanes	
+  resources :users	
+	
 end
