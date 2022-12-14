@@ -4,8 +4,12 @@ class Api::V1::ReservationsController < ApplicationController
 
   # GET /reservations
   def index
-    @reservations = @user.reservations.all
-    render json: @reservations
+    @reservations = @user.reservations.includes(:aeroplane).all
+    @res = []
+    @reservations.each do |res|
+      @res << {**res.as_json, aeroplane_name: res.aeroplane.name }
+    end
+    render json: @res
   end
 
   # GET /reservations/1
