@@ -6,7 +6,17 @@ RSpec.describe 'Aeroplanes', type: :request do
       let!(:my_aeroplane) { FactoryBot.create(:aeroplane) }
 
       before do
-        post '/api/v1/aeroplanes', params: { aeroplane: { name: my_aeroplane.name, make_year: my_aeroplane.make_year, country_of_origin: my_aeroplane.country_of_origin, fuel_economy: my_aeroplane.fuel_economy, long_range_cruise_speed: my_aeroplane.long_range_cruise_speed, passenger_capacity: my_aeroplane.passenger_capacity, crew: my_aeroplane.crew, description: my_aeroplane.description, photo: my_aeroplane.photo } }
+        post '/api/v1/aeroplanes',
+             params: { aeroplane:
+              { name: my_aeroplane.name,
+                make_year: my_aeroplane.make_year,
+                country_of_origin: my_aeroplane.country_of_origin,
+                fuel_economy: my_aeroplane.fuel_economy,
+                long_range_cruise_speed: my_aeroplane.long_range_cruise_speed,
+                passenger_capacity: my_aeroplane.passenger_capacity,
+                crew: my_aeroplane.crew,
+                description: my_aeroplane.description,
+                photo: my_aeroplane.photo } }
       end
 
       it 'return the name' do
@@ -48,7 +58,17 @@ RSpec.describe 'Aeroplanes', type: :request do
 
     context 'with invalid parameters' do
       before do
-        post '/api/v1/aeroplanes', params: { aeroplane: { name: nil, make_year: nil, country_of_origin: nil, fuel_economy: nil, long_range_cruise_speed: nil, passenger_capacity: nil, crew: nil, description: nil, photo: nil } }
+        post '/api/v1/aeroplanes',
+             params: { aeroplane:
+              { name: nil,
+                make_year: nil,
+                country_of_origin: nil,
+                fuel_economy: nil,
+                long_range_cruise_speed: nil,
+                passenger_capacity: nil,
+                crew: nil,
+                description: nil,
+                photo: nil } }
       end
 
       it 'returns unprocessable entity status' do
