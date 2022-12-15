@@ -19,4 +19,8 @@ group :development, :test do
   gem 'capybara', '~> 3.38'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec', '~> 3.12'
+  gem "rspec-rails", "~> 6.0"
+  gem "rswag-specs"
 end
+
+gem "rswag", "~> 2.8"
