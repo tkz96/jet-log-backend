@@ -7,7 +7,7 @@ class Api::V1::ReservationsController < ApplicationController
     @reservations = @user.reservations.includes(:aeroplane).all
     @res = []
     @reservations.each do |res|
-      @res << {**res.as_json, aeroplane_name: res.aeroplane.name }
+      @res << { **res.as_json, aeroplane_name: res.aeroplane.name }
     end
     render json: @res
   end
