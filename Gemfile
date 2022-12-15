@@ -12,8 +12,8 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rack-cors'
 gem 'rails', '~> 7.0.4'
-gem 'rubocop', '~> 1.39'
 gem 'rswag', '~> 2.8'
+gem 'rubocop', '~> 1.39'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
