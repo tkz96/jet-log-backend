@@ -111,6 +111,8 @@ GEM
     irb (1.5.1)
       reline (>= 0.3.0)
     json (2.6.3)
+    json-schema (3.0.0)
+      addressable (>= 2.8)
     jwt (2.5.0)
     loofah (2.19.0)
       crass (~> 1.0.2)
@@ -135,17 +137,12 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.8)
-    nokogiri (1.13.9-arm64-darwin)
-      racc (~> 1.4)
     nokogiri (1.13.9-x64-mingw-ucrt)
-      racc (~> 1.4)
-    nokogiri (1.13.9-x86_64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.22.1)
     parser (3.1.3.0)
       ast (~> 2.4.1)
-    pg (1.4.5)
     pg (1.4.5-x64-mingw-ucrt)
     public_suffix (5.0.0)
     puma (5.6.5)
@@ -191,6 +188,10 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rexml (3.2.5)
+    rspec (3.12.0)
+      rspec-core (~> 3.12.0)
+      rspec-expectations (~> 3.12.0)
+      rspec-mocks (~> 3.12.0)
     rspec-core (3.12.0)
       rspec-support (~> 3.12.0)
     rspec-expectations (3.12.0)
@@ -208,6 +209,20 @@ GEM
       rspec-mocks (~> 3.11)
       rspec-support (~> 3.11)
     rspec-support (3.12.0)
+    rswag (2.8.0)
+      rswag-api (= 2.8.0)
+      rswag-specs (= 2.8.0)
+      rswag-ui (= 2.8.0)
+    rswag-api (2.8.0)
+      railties (>= 3.1, < 7.1)
+    rswag-specs (2.8.0)
+      activesupport (>= 3.1, < 7.1)
+      json-schema (>= 2.2, < 4.0)
+      railties (>= 3.1, < 7.1)
+      rspec-core (>= 2.14)
+    rswag-ui (2.8.0)
+      actionpack (>= 3.1, < 7.1)
+      railties (>= 3.1, < 7.1)
     rubocop (1.39.0)
       json (~> 2.3)
       parallel (~> 1.10)
@@ -238,9 +253,7 @@ GEM
     zeitwerk (2.6.6)
 
 PLATFORMS
-  arm64-darwin-21
   x64-mingw-ucrt
-  x86_64-darwin-21
 
 DEPENDENCIES
   bcrypt
@@ -256,7 +269,10 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.4)
-  rspec-rails
+  rspec (~> 3.12)
+  rspec-rails (~> 6.0)
+  rswag (~> 2.8)
+  rswag-specs
   rubocop (~> 1.39)
   tzinfo-data
 
