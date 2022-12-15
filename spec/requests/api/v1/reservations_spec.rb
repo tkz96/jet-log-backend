@@ -1,8 +1,8 @@
 require 'swagger_helper'
 
-RSpec.describe 'api/v1/aeroplanes', type: :request do
-  path '/api/v1/aeroplanes' do
-    get('list aeroplanes') do
+RSpec.describe 'api/v1/reservations', type: :request do
+  path '/api/v1/reservations' do
+    get('list reservations') do
       response(200, 'successful') do
         after do |example|
           example.metadata[:response][:content] = {
@@ -15,7 +15,7 @@ RSpec.describe 'api/v1/aeroplanes', type: :request do
       end
     end
 
-    post('create aeroplane') do
+    post('create reservation') do
       response(200, 'successful') do
         after do |example|
           example.metadata[:response][:content] = {
@@ -29,11 +29,11 @@ RSpec.describe 'api/v1/aeroplanes', type: :request do
     end
   end
 
-  path '/api/v1/aeroplanes/{id}' do
+  path '/api/v1/reservations/{id}' do
     # You'll want to customize the parameter types...
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
-    get('show aeroplane') do
+    get('show reservation') do
       response(200, 'successful') do
         let(:id) { '123' }
 
@@ -48,7 +48,7 @@ RSpec.describe 'api/v1/aeroplanes', type: :request do
       end
     end
 
-    patch('update aeroplane') do
+    patch('update reservation') do
       response(200, 'successful') do
         let(:id) { '123' }
 
@@ -63,7 +63,7 @@ RSpec.describe 'api/v1/aeroplanes', type: :request do
       end
     end
 
-    put('update aeroplane') do
+    put('update reservation') do
       response(200, 'successful') do
         let(:id) { '123' }
 
@@ -78,7 +78,7 @@ RSpec.describe 'api/v1/aeroplanes', type: :request do
       end
     end
 
-    delete('delete aeroplane') do
+    delete('delete reservation') do
       response(200, 'successful') do
         let(:id) { '123' }
 
