@@ -23,6 +23,6 @@ group :development, :test do
 end
 
 group :test do
-    gem 'factory_bot_rails'
-    gem 'faker'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
