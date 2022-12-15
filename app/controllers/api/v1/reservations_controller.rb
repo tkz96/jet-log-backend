@@ -42,7 +42,6 @@ class Api::V1::ReservationsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_reservation
-    # @reservation = Reservation.find(params[:id])
     @reservation = @user.reservations.find(params[:id])
   end
 

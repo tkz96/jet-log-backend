@@ -18,5 +18,11 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 group :development, :test do
   gem 'capybara', '~> 3.38'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'rspec', '~> 3.12'
+  # gem 'rspec', '~> 3.12'
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
