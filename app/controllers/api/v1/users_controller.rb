@@ -1,5 +1,4 @@
 class Api::V1::UsersController < ApplicationController
-  # before_action :authorize
   before_action :set_user, only: %i[show update destroy]
 
   # GET /users - should be available to admin only
@@ -27,15 +26,6 @@ class Api::V1::UsersController < ApplicationController
       render json: { error: 'Invalid username or password' }, status: :unprocessable_entity
     end
   end
-
-  # PATCH/PUT /users/1
-  # def update
-  #   if @user.update(user_params)
-  #     render json: @user
-  #   else
-  #     render json: @user.errors, status: :unprocessable_entity
-  #   end
-  # end
 
   # DELETE /users/1
   def destroy
