@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: password
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  port: 5432
+  database: jet_log_backend_development
+  host: localhost
+
+test:
+  <<: *default
+  database: jet_log_backend_test
+
+production:
+  <<: *default
+  database: jet_log_backend_production
+  username: jet_log_backend
+  password: <%= ENV["JET_LOG_BACKEND_DATABASE_PASSWORD"] %>
