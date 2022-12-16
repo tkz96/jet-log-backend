@@ -131,6 +131,8 @@ rspec <relative path to the test file>
 
 ### Kanban
 - This is the link to the [Kanban Board](https://github.com/users/tkz96/projects/2/views/3)
+- This is the link to the [Kanban Board screenshots](https://docs.google.com/document/d/1925OavHmfyYMGpLE-CxJED_-M3QUzuIUvk3eENh0pu0/edit?usp=sharing)
+- Our team had 5 members
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
