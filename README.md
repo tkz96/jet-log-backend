@@ -21,7 +21,8 @@
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
+  - [Deployment](#deployment)
+  - [Kanban](#kanban)
 - [👥 Authors](#authors)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -126,7 +127,10 @@ rspec <relative path to the test file>
 
 ### Deployment
 
-- The project has no active deployments yet
+- The project has been delpoyed at [https://jet-log.herokuapp.com](https://jet-log.herokuapp.com)
+
+### Kanban
+- This is the link to the [Kanban Board](https://github.com/users/tkz96/projects/2/views/3)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
